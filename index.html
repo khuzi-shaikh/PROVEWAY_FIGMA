@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+    <script>
+        function toggleExpand(type) {
+            const boxes = document.querySelectorAll('.box');
+
+            boxes.forEach(box => {
+                const input = box.querySelector('input');
+                const details = box.querySelector('.details');
+
+                if (input.id === type + 'Box') {
+                    details.style.display = 'block';
+                    box.classList.add('active');
+                } else {
+                    details.style.display = 'none';
+                    box.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="dropdown">
+        <div class="div0"></div>
+        <p class="top_heading">Bundle & Save</p>
+        <div class="div1"></div><br>
+        <div class="box top">
+            <span class="radio"> <input type="radio" name="box" id="topBox" onclick="toggleExpand('top')"></span>
+            <label> 1 Pair </label> <br>
+            <b>
+                <span id="DKK">DKK 195.00</span>
+                <span id="discount0">50% OFF</span>
+            </b>
+            <div class="details">
+                <p style="margin-left: 15px;">Size</p>
+                <p style="margin-left: 100px; margin-top: -35px">Colour</p>
+                <span class="hash"> #1 </span>
+                <select class="select">
+                    <option>S</option>
+                </select>
+                <select class="select">
+                    <option>Colour</option>
+                </select><br><br>
+                <span class="hash"> #2 </span>
+                <select class="select">
+                    <option>S</option>
+                    <option>S</option>
+                </select>
+                <select class="select">
+                    <option>Colour</option>
+                    <option>Colour</option>
+                </select>
+            </div>
+        </div>
+        <div class="box middle active">
+            <span class="radio"><input type="radio" name="box" id="middleBox" onclick="toggleExpand('middle')"
+                    checked></span>
+            <label> 2 Pair </label>
+            <b><span id="most_popular">Most Popular</span><br></b>
+            <b>
+                <span id="DKK">DKK 345.00</span>
+                <del id="del">DKK 195.00</del>
+                <span id="discount">40% OFF</span>
+            </b>
+            <div class="details">
+                <p style="margin-left: 15px;">Size</p>
+                <p style="margin-left: 100px; margin-top: -35px">Colour</p>
+                <span class="hash"> #1 </span>
+                <select class="select">
+                    <option>S</option>
+                </select>
+                <select class="select">
+                    <option>Colour</option>
+                </select><br><br>
+                <span class="hash"> #2 </span>
+                <select class="select">
+                    <option>S</option>
+                    <option>S</option>
+                </select>
+                <select class="select">
+                    <option>Colour</option>
+                    <option>Colour</option>
+                </select>
+            </div>
+        </div>
+        <div class="box bottom">
+            <span class="radio"><input type="radio" name="box" id="bottomBox" onclick="toggleExpand('bottom')"></span>
+            <label> 3 Pair </label> <br>
+            <b>
+                <span id="DKK">DKK 528.00</span>
+                <span id="discount0">60% OFF</span>
+            </b>
+            <div class="details">
+                <p style="margin-left: 15px;">Size</p>
+                <p style="margin-left: 100px; margin-top: -35px">Colour</p>
+                <span class="hash"> #1 </span>
+                <select class="select">
+                    <option>S</option>
+                </select>
+                <select class="select">
+                    <option>Colour</option>
+                </select><br><br>
+                <span class="hash"> #2 </span>
+                <select class="select">
+                    <option>S</option>
+                    <option>S</option>
+                </select>
+                <select class="select">
+                    <option>Colour</option>
+                    <option>Colour</option>
+                </select>
+            </div>
+        </div>
+        <div class="bottom_div">
+            <aside style="color: #007F61;">Free 2 Day Shipping</aside>
+            <aside>Total DKK 360.00</aside>
+        </div>
+        <button class="button"> + Add to Cart </button>
+    </div>
+</body>
+
+</html>
